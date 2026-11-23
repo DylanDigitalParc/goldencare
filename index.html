@@ -6,14 +6,14 @@
 <title>Retirement Professional | Plan · Prepare · Prosper</title>
 <meta name="description" content="Explore retirement income strategies, prepare for unexpected healthcare expenses, and connect with a local professional who can help you understand your options.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Lato:wght@400;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700;800&family=Lato:wght@400;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0F2D52;--primary:#1A4C8A;--gold:#E0A100;--green:#2E7D32;--green-dk:#256628;--ink:#2f3437;--muted:#5b6470;--light:#F4F6F4;--line:#dfe4ea;
---serif:"Lora",Georgia,serif;--accent:"Poppins",system-ui,sans-serif;--body:"Lato",system-ui,sans-serif;--shadow:0 6px 30px rgba(15,45,82,.10)}
+--serif:"Figtree",system-ui,sans-serif;--accent:"Poppins",system-ui,sans-serif;--body:"Lato",system-ui,sans-serif;--shadow:0 6px 30px rgba(15,45,82,.10)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:var(--body);font-size:19px;line-height:1.65;color:var(--ink);background:#fff}
 img{max-width:100%;display:block}a{color:var(--primary)}
-h1,h2,h3{font-family:var(--serif);color:var(--navy);line-height:1.15;margin:0 0 .45em;text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:700;color:var(--navy);line-height:1.15;margin:0 0 .45em;text-wrap:balance}
 p{text-wrap:pretty}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 section{padding:84px 0}
@@ -45,7 +45,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #6CC4
 .hero .wrap{position:relative;padding-top:80px;padding-bottom:84px}
 .hero-copy{max-width:540px}
 .hero .eyebrow{color:#fff;display:inline-block;border-bottom:3px solid var(--gold);padding-bottom:8px;margin-bottom:22px}
-.hero h1{color:#fff;font-size:clamp(38px,4.6vw,58px)}
+.hero h1{color:#fff;font-weight:800;font-size:clamp(38px,4.6vw,58px)}
 .hero h1 span{display:block;white-space:nowrap}
 .hero p{font-size:20px;color:#e6edf5;margin:0 0 32px}
 .ctas{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
@@ -96,9 +96,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #6CC4
 .pm{position:fixed;inset:0;z-index:200;background:rgba(10,25,45,.62);display:flex;align-items:center;justify-content:center;padding:24px}
 .pm[hidden]{display:none}
 .pm-box{background:#fff;border-radius:22px;width:100%;max-width:860px;max-height:calc(100vh - 48px);overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.35)}
-.pm-head{display:flex;gap:16px;align-items:flex-start;padding:30px 34px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1}
+.pm-head{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;padding:30px 34px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1}
 .pm-head h2{font-size:30px;margin:0 0 4px}.pm-head .eyebrow{margin-bottom:6px}
 .pm-sub{margin:0;color:var(--muted);font-size:17px}
+.pm-ttl{flex:1;min-width:0}.pm-zip{width:100%;margin-top:4px}.pm-err{width:100%;margin:-6px 0 0;color:#B3261E;font-size:15px}.pm-err:empty{display:none}
+.pro-list:empty{display:none}
 .pm-close{margin-left:auto;width:48px;height:48px;border-radius:50%;border:2px solid #cdd6df;background:#fff;font-size:20px;color:var(--navy);cursor:pointer;flex:none}
 .pro-list{list-style:none;margin:0;padding:10px 34px}
 .pro{display:grid;grid-template-columns:96px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
@@ -136,7 +138,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #6CC4
 footer{background:var(--navy);color:#d6e0ec;padding:44px 0}
 footer .wrap{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
 footer .logo{height:84px}
-footer em{font-family:var(--serif);font-size:20px;color:#fff;border-left:1px solid #3a5a80;padding-left:32px}
+footer em{font-family:var(--serif);font-style:normal;font-weight:600;font-size:20px;color:#fff;border-left:1px solid #3a5a80;padding-left:32px}
 footer nav{margin-left:auto;display:flex;gap:22px}
 footer nav a{color:#fff;text-decoration:none;font-size:16px}
 footer nav a+a{border-left:1px solid #3a5a80;padding-left:22px}
@@ -190,7 +192,7 @@ footer nav a+a{border-left:1px solid #3a5a80;padding-left:22px}
     <a href="#income">Retirement Income</a>
    </nav>
   </div>
-  <a class="btn btn-green" href="#find"><svg><use href="#i-pin"/></svg><span>Find a Professional</span></a>
+  <a class="btn btn-green" href="#find" data-find><svg><use href="#i-pin"/></svg><span>Find a Professional</span></a>
  </div>
 </header>
 
@@ -204,7 +206,7 @@ footer nav a+a{border-left:1px solid #3a5a80;padding-left:22px}
    <p>Explore retirement income strategies, prepare for unexpected healthcare expenses, and connect with a local professional who can help you understand your&nbsp;options.</p>
    <div class="ctas">
     <a class="btn btn-green" href="https://retirementprofessional.com/retirement-assessment-quiz/"><svg><use href="#i-clip"/></svg><span>Take the Retirement&nbsp;Readiness Assessment</span><svg class="arr"><use href="#i-arrow"/></svg></a>
-    <a class="btn btn-ghost" href="#find"><svg><use href="#i-user"/></svg><span>Find a Local Professional</span><svg class="arr"><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-ghost" href="#find" data-find><svg><use href="#i-user"/></svg><span>Find a Local Professional</span><svg class="arr"><use href="#i-arrow"/></svg></a>
    </div>
   </div>
  </div>
@@ -279,8 +281,15 @@ footer nav a+a{border-left:1px solid #3a5a80;padding-left:22px}
 <div class="pm" id="proModal" hidden>
  <div class="pm-box" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
   <div class="pm-head">
-   <div><p class="eyebrow">Find a Professional</p><h2 id="pmTitle">Retirement Professionals near <span id="proZip"></span></h2><p class="pm-sub" id="proCount"></p></div>
+   <div class="pm-ttl"><p class="eyebrow">Find a Professional</p><h2 id="pmTitle">Find a Retirement Professional</h2><p class="pm-sub" id="proCount">Enter your ZIP code to see professionals near you.</p></div>
    <button class="pm-close" data-close aria-label="Close">✕</button>
+   <form class="zip pm-zip" id="pmZipForm" novalidate>
+    <svg class="pin"><use href="#i-pin"/></svg>
+    <label for="pmZipIn" style="position:absolute;left:-9999px">ZIP code</label>
+    <input id="pmZipIn" inputmode="numeric" maxlength="5" autocomplete="postal-code" placeholder="Enter your ZIP code">
+    <button class="btn btn-green" type="submit">Search <svg class="arr"><use href="#i-arrow"/></svg></button>
+   </form>
+   <p class="pm-err" id="pmErr" role="alert"></p>
   </div>
   <ul class="pro-list" id="proList"></ul>
   <div class="pm-foot">Not sure where to start? <a href="https://retirementprofessional.com/retirement-assessment-quiz/">Take the Retirement Readiness Assessment →</a></div>
@@ -308,8 +317,10 @@ function matchPros(z){var m=PROS.filter(function(p){return p.region.some(functio
 (function(){
 var dlg=document.getElementById('proModal'),list=document.getElementById('proList'),lastFocus=null;
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-function open(z){
- document.getElementById('proZip').textContent=z;
+function show(){lastFocus=document.activeElement;dlg.hidden=false;document.documentElement.style.overflow='hidden';}
+function render(z){
+ document.getElementById('pmZipIn').value=z;document.getElementById('pmErr').textContent='';
+ document.getElementById('pmTitle').textContent='Retirement Professionals near '+z;
  var res=matchPros(z);document.getElementById('proCount').textContent=res.length+(res.length===1?' professional serves':' professionals serve')+' your area';
  list.innerHTML=res.map(function(p){var tel=p.phone.replace(/\D/g,'');
   return '<li class="pro"><img src="'+p.photo+'" alt="'+esc(p.name)+'"><div class="pi"><h3>'+p.name+'</h3><p class="pt">'+p.title+'</p>'+
@@ -317,8 +328,20 @@ function open(z){
   '<p class="loc"><svg><use href="#i-pin"/></svg>'+p.city+' · '+p.miles.toFixed(1)+' miles away</p></div>'+
   '<div class="pa"><a class="btn btn-green" href="'+p.url+'">View Profile<svg class="arr"><use href="#i-arrow"/></svg></a>'+
   '<a class="btn btn-line" href="tel:+1'+tel+'"><svg><use href="#i-phone"/></svg>'+p.phone+'</a></div></li>';}).join('');
- lastFocus=document.activeElement;dlg.hidden=false;document.documentElement.style.overflow='hidden';dlg.querySelector('.pm-close').focus();
 }
+function open(z){render(z);show();dlg.querySelector('.pm-close').focus();}
+function openBlank(){
+ document.getElementById('pmTitle').textContent='Find a Retirement Professional';
+ document.getElementById('proCount').textContent='Enter your ZIP code to see professionals near you.';
+ document.getElementById('pmErr').textContent='';list.innerHTML='';var i=document.getElementById('pmZipIn');i.value='';
+ show();setTimeout(function(){i.focus();},30);
+}
+document.querySelectorAll('[data-find]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();openBlank();});});
+document.getElementById('pmZipForm').addEventListener('submit',function(e){
+ e.preventDefault();var z=document.getElementById('pmZipIn').value.trim();
+ if(!/^\d{5}$/.test(z)){document.getElementById('pmErr').textContent='Please enter a 5-digit ZIP code.';return;}
+ render(z);
+});
 function close(){dlg.hidden=true;document.documentElement.style.overflow='';if(lastFocus)lastFocus.focus();}
 dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.closest('[data-close]'))close();});
 list.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"],a[href$="/"]');if(a)close();});
